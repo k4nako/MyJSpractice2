@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta cherset="utf-8">
+    <title>JSpracticegame</title>
+    <link rel="icon" href="ウィンドウアイコン.png">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body> 
+    <script>
+      'use strict';
+      
+      const num = 7;
+      const winner = Math.floor(Math.random() * num);
+
+      for (let i = 0; i < num; i++) {
+        const div = document.createElement('div')
+        div.classList.add('box');
+
+        div.addEventListener('click', () => {
+          if (i === winner) {
+            div.textContent = 'Win!';
+            div.classList.add('win');
+          }
+          else {
+            div.textContent = 'Lose!';
+            div.classList.add('lose');
+          }
+        });
+
+        document.body.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

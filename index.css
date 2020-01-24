@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 120px;
+  height: 120px;
+  background: skyblue;       
+  cursor: pointer;
+  transition: 0.8s;
+  margin: 0 8px 8px 0;
+  color: blue;
+  font-size: large;
+  text-align: center;
+  line-height: 120px;
+}
+.win {
+  background: pink;
+  color: orangered;
+  border-radius: 50%;
+  transform: rotate(360deg);
+}
+.lose{
+  transform: scale(0.9);
+}
